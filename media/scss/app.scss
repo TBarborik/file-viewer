@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  position: relative;
+  padding: 0;
+
+  &:not(.iframe) {
+    background: #0b141d url("../img/mountain-grad.png") no-repeat center;
+    margin: 0;
+    padding: 0 16px;
+    color: white;
+  }
+}
+
+body.iframe {
+  margin: 0;
+
+  h1 {
+    margin: 0 0 16px 0;
+    padding: 16px;
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+
+    small {
+      font-size: 50%;
+      text-shadow: none;
+      margin-left: 16px;
+    }
+  }
+}
+
+#content-wrapper {
+  max-width: 1024px;
+  margin: 64px auto 64px auto;
+  padding: 16px;
+  position: relative;
+  background: rgba(0, 0, 0, .3);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.43);
+
+  header {
+    border-bottom: 1px solid rgba(0, 0, 0, .35);
+    padding-bottom: 16px;
+
+    h1 {
+      margin: 0 0 16px 0;
+    }
+
+    margin-bottom: 32px;
+  }
+
+  article {
+    .item {
+      display: block;
+      line-height: 28px;
+      padding: 8px 0 8px 48px;
+
+      &.file {
+        background: url("../img/sheet.png") no-repeat left center;
+      }
+
+      &.directory {
+        background: url("../img/folder.png") no-repeat left center;
+      }
+    }
+
+    a {
+      color: #2196F3;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background: #2196F3;
+        width: 100%;
+        max-width: 0;
+        transition: all .3s;
+      }
+
+      &:hover, &:focus {
+        &::after {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  position: relative;
+  padding: 0; }
+  body:not(.iframe) {
+    background: #0b141d url("../img/mountain-grad.png") no-repeat center;
+    margin: 0;
+    padding: 0 16px;
+    color: white; }
+
+body.iframe {
+  margin: 0; }
+  body.iframe h1 {
+    margin: 0 0 16px 0;
+    padding: 16px; }
+
+h1 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h1 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+h2 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h2 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+h3 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h3 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+h4 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h4 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+h5 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h5 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+h6 {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  h6 small {
+    font-size: 50%;
+    text-shadow: none;
+    margin-left: 16px; }
+
+#content-wrapper {
+  max-width: 1024px;
+  margin: 64px auto 64px auto;
+  padding: 16px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.43); }
+  #content-wrapper header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    padding-bottom: 16px;
+    margin-bottom: 32px; }
+    #content-wrapper header h1 {
+      margin: 0 0 16px 0; }
+  #content-wrapper article .item {
+    display: block;
+    line-height: 28px;
+    padding: 8px 0 8px 48px; }
+    #content-wrapper article .item.file {
+      background: url("../img/sheet.png") no-repeat left center; }
+    #content-wrapper article .item.directory {
+      background: url("../img/folder.png") no-repeat left center; }
+  #content-wrapper article a {
+    color: #2196F3;
+    display: inline-block;
+    text-decoration: none;
+    position: relative; }
+    #content-wrapper article a::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background: #2196F3;
+      width: 100%;
+      max-width: 0;
+      transition: all .3s; }
+    #content-wrapper article a:hover::after, #content-wrapper article a:focus::after {
+      max-width: 100%; }
+
+/*# sourceMappingURL=app.css.map */
