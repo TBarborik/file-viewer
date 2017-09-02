@@ -11,11 +11,9 @@ define('CLASSES', DOCROOT . "classes" . DIRECTORY_SEPARATOR);
 define('MEDIA', DOCROOT . "media" . DIRECTORY_SEPARATOR);
 
 // Set autoloading
-spl_autoload_register(function ($className) {
-    $namespace = strtolower(str_replace("\\", "/", __NAMESPACE__));
-    $className = strtolower(str_replace("\\", "/", $className));
-    $class = "./" . (empty($namespace) ? "" : $namespace . "/") . "classes" . DIRECTORY_SEPARATOR . "{$className}.php";
-    include_once($class);
+spl_autoload_register(function (string $className) {
+    $classPath = DOCROOT . "classes" . DIRECTORY_SEPARATOR . strtolower($className) . ".php";
+    include_once($classPath);
 });
 
 $action = Lib::getAction();
