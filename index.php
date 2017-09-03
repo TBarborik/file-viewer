@@ -12,7 +12,7 @@ define('MEDIA', DOCROOT . "media" . DIRECTORY_SEPARATOR);
 
 // Set autoloading
 spl_autoload_register(function (string $className) {
-    $classPath = DOCROOT . "classes" . DIRECTORY_SEPARATOR . strtolower($className) . ".php";
+    $classPath = CLASSES. strtolower($className) . ".php";
     include_once($classPath);
 });
 
@@ -22,16 +22,16 @@ try {
     $fm = new FileManager(Lib::getWorkingDirectory());
 
     switch ($action) {
-        case "download": {
-            $fm->downloadFile(Lib::getFilePath());
-            break;
-        }
+        //case "download": {
+        //    $fm->downloadFile(Lib::getFilePath());
+        //    break;
+        //}
 
         case "show": {
             $fm->showFile(Lib::getFilePath());
             break;
         }
-    }
+    };
 
 } catch (Exception $e) {
     echo $e->getMessage();
