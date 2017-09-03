@@ -1,11 +1,17 @@
 <?php
 
+/**
+ * Class Lib
+ * Static class with helper methods and constants.
+ */
 class Lib
 {
 
     const IMAGE_EXTENSIONS = array("png", "jpg", "jpeg", "gif");
 
     /**
+     * Returns path to the current working directory.
+     * Works with GET parameter.
      * @return string
      */
     public static function getWorkingDirectory(): string
@@ -36,6 +42,8 @@ class Lib
     }
 
     /**
+     * Returns action for file manager to do.
+     * Works with GET parameter.
      * @return string
      */
     public static function getAction(): string
@@ -49,6 +57,8 @@ class Lib
     }
 
     /**
+     * Returns file path to the file obtained in the GET parameter
+     * only if exists.
      * @return string
      */
     public static function getFilePath(): string
@@ -61,6 +71,7 @@ class Lib
     }
 
     /**
+     * Checks if given string matches at least on of the patterns.
      * @param array $patterns
      * @param string $str
      * @return bool
@@ -75,6 +86,11 @@ class Lib
         return false;
     }
 
+    /**
+     * Removes last directory (the deepest one) from given path.
+     * @param string $path
+     * @return string
+     */
     public static function stripLast(string $path): string
     {
         $parts = explode(DIRECTORY_SEPARATOR, $path);
