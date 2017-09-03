@@ -11,7 +11,7 @@
     <script type="text/javascript" src="media/js/jquery.fancybox.min.js"></script>
     <title>FileViewer</title>
 </head>
-<body>
+<body class="base">
 <div id="content-wrapper">
     <header>
         <h1>FileViewer

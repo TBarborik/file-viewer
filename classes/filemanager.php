@@ -51,6 +51,16 @@ class FileManager
     }
 
     /**
+     * @param string $reg
+     * @return FileManager
+     */
+    public function addIgnore(string $reg): FileManager
+    {
+        array_push($this->ignore, $reg);
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public function getDirectoryContent(): array

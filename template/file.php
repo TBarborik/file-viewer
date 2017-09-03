@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="media/css/app.css">
     <title>FileManager &bull; showing file content</title>
 </head>
-<body class="iframe">
+<body class="file">
     <h1>Showing content <small><?php echo $filePath; ?></small></h1>
     <?php if (isset($fileInfo["extension"]) && in_array($fileInfo["extension"], $imgExtensions)) { ?>
-        <img src="<?php echo $filePath; ?>">
+        <div class="image-wrapper">
+            <img src="<?php echo $filePath; ?>">
+        </div>
     <?php } else { ?>
-        <pre><code class="language-<?php echo $fileInfo["extension"]; ?>"><?php echo $fileContent; ?></code></pre>
+        <pre><code class="language-<?php echo $fileInfo["extension"]; ?> line-numbers"><?php echo $fileContent; ?></code></pre>
         <script type="text/javascript" src="media/js/prism.js"></script>
     <?php } ?>
 </body>
