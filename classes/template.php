@@ -20,16 +20,21 @@ class Template
      */
     public function render()
     {
-        ob_start();
         foreach ($this->vars as $varName => $varValue)
             $$varName = $varValue;
+
+        $show_template = true;
+
+        ob_start();
 
         include(TEMPLATE . $this->template);
         $this->rendered = ob_get_contents();
 
+        ob_clean();
+
         foreach ($this->vars as $varName => $varValue)
             unset($$varName);
-        ob_clean();
+        unset($show_template);
     }
 
     /**

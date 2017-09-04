@@ -1,3 +1,5 @@
+<?php if (!isset($show_template) || !$show_template) exit(); ?>
+
 <!doctype html>
 <html lang="cz">
 <head>

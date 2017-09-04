@@ -1,3 +1,5 @@
+<?php if (!isset($show_template) || !$show_template) exit(); ?>
+
 <!doctype html>
 <html lang="cz">
 <head>
@@ -16,7 +18,7 @@
             <img src="<?php echo $filePath; ?>">
         </div>
     <?php } else { ?>
-        <pre><code class="language-<?php echo $fileInfo["extension"]; ?> line-numbers"><?php echo $fileContent; ?></code></pre>
+        <pre><code class="language-<?php echo (array_key_exists("extension", $fileInfo) ? $fileInfo["extension"] : ""); ?> line-numbers"><?php echo $fileContent; ?></code></pre>
         <script type="text/javascript" src="media/js/prism.js"></script>
     <?php } ?>
 </body>
